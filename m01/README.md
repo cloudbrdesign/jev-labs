@@ -16,4 +16,13 @@ verify the code around them.
 
 ## Runs
 
-TODO: filled in from the recorded run (date, model ID, SDK version, Python version).
+Recorded on 2 October 2026 on macOS with Python 3.12.2, typesafe-sdk 0.7.2, model `jev-1.13.0`
+(11 live requests for M0 and M1 together). `m01/replay/*.jsonl` hold that run.
+
+- `check.py`: 13 passed (replay); `pytest -q m01/tests`: 4 passed.
+- Triage v1 sends LT-005 (boots a size too small) to Product support and LT-006 (missing sleeping
+  bag) to the Account team: the `team` Choice offers only billing, technical and account, so the
+  model must pick one of those. Lesson 1.4 discusses it; Module 2's lab adds `orders` and `other`.
+- Probe A (negation, LT-005): refund 0.14, not_refund 0.79, sum 0.93.
+- Probe B (counting, 7 items, our label 4 accessories): one Choice answered 4; one Noul per item,
+  counted in code, gave 4. The counting weakness the docs describe did not show on this short list.
