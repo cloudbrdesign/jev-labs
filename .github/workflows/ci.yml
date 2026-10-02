@@ -1,0 +1,27 @@
+# Offline self-tests only: the real TypeSafe SDK against a scripted fake. No key, no network
+# calls to TypeSafe, no secrets. A red cross means a check broke; the failed step's log says which.
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  selftest:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -r requirements.txt
+      - run: python -m compileall -q labkit m0*
+      - run: pytest -q
