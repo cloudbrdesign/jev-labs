@@ -1,0 +1,20 @@
+{
+  "_note": "Our expected answers, written before the recorded run. They label what a support lead at Lanternfield would decide; they are not model output.",
+  "team": {
+    "LT-001": "billing",
+    "LT-002": "technical",
+    "LT-003": "account",
+    "LT-005": "orders",
+    "LT-006": "orders",
+    "LT-007": "orders",
+    "LT-008": "other"
+  },
+  "order_issue": {
+    "LT-005": "wrong_size",
+    "LT-006": "not_delivered",
+    "LT-007": "other"
+  },
+  "about_order": {
+    "LT-006": "O-58190"
+  }
+}
