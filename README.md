@@ -34,3 +34,8 @@ Then follow [m00/](m00/README.md). Each later module lives on its own branch
 
 Put it in your shell (`export TYPESAFE_API_KEY=...`) or in a `.env` file (copy `.env.example`).
 `.env` is git-ignored. The labs never print the key and never write it to a file.
+
+## Licence
+
+Code is licensed under Apache-2.0; lab guides, data and other written and visual material under
+CC BY 4.0. Third-party material keeps its own terms. See [LICENSING.md](LICENSING.md) for what applies where.
